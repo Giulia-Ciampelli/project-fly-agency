@@ -10,6 +10,7 @@ export default function UserDetailsCard() {
         <div>
 
             {/* correggi il map */}
+            {/* test */}
             {TravelCustomers.map(customer => {
                 <ul>
                     <li key={index}>
