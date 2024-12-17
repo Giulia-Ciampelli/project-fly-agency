@@ -1,4 +1,4 @@
-const costumers =
+export default
     [
         {
             "id": 1,
@@ -222,5 +222,3 @@ const costumers =
         }
     ]
 
-
-module.exports = costumers
