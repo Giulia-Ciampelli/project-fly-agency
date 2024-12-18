@@ -33,11 +33,12 @@ export default function getData() {
                                 <Link to={`/custumers/${custumer.citta_del_viaggio}/${custumer.id}`}>
                                     <div>{custumer.nome} {custumer.cognome} </div>
                                 </Link>
-
-
                             </li>
                         </ul>
                     ))}
+                    <Link to='/'>
+                        <button className='btn btn-danger'>Torna alla Home</button>
+                    </Link>
                 </div>
             </div>
 
