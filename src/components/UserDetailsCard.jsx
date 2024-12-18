@@ -13,21 +13,25 @@ export default function UserDetailsCard() {
     return (
         <div>
 
-            {/* correggi il map */}
+            {/* correggo il map */}
             {TravelCustomers.map(customer => {
-                <ul>
-                    <li key={customer.id}>
-                        <p>
-                            Mail: {customer.email}
-                        </p>
-                        <p>
-                            Numero di telefono: {customer.numero}
-                        </p>
-                        <p>
-                            Codice fiscale: {customer.codice_fiscale}
-                        </p>
-                    </li>
-                </ul>
+
+                return (
+                    <ul>
+                        <li key={customer.id}>
+                            <p>
+                                Mail: {customer.email}
+                            </p>
+                            <p>
+                                Numero di telefono: {customer.numero}
+                            </p>
+                            <p>
+                                Codice fiscale: {customer.codice_fiscale}
+                            </p>
+                        </li>
+                    </ul>
+
+                )
             })}
         </div>
     )
