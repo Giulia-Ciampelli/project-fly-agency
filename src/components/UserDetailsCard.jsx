@@ -1,3 +1,6 @@
+import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 // Link su nome, mostrare a schermo mail, numero di telefono e codice fiscale
 import TravelCustomers from '../data/TravelCostumers.js';
 
@@ -6,25 +9,44 @@ import TravelCustomers from '../data/TravelCostumers.js';
 // aspettiamo prop del singolo customer da task 2
 
 export default function UserDetailsCard() {
-    return (
-        <div>
+    const { id, citta_del_viaggio } = useParams();
+    const customer = TravelCustomers.find(customer => customer.id === parseInt(id) && customer.citta_del_viaggio === citta_del_viaggio)
+    const navigate = useNavigate()
+    const handleButton = () => {
 
-            {/* correggi il map */}
-            {TravelCustomers.map(customer => {
-                <ul>
-                    <li key={index}>
+        navigate(-1)
+
+    }
+
+    return (
+        <>
+            <div className='card card-details'>
+                <h3 className='py-2 text-center card-header'>
+                    Profilo utente
+                </h3>
+
+                <ul className="list-unstyled py-2 text-center" key={customer.id}>
+                    <li >
                         <p>
-                            email
+                            Mail: {customer.email}
                         </p>
                         <p>
-                            telefono
+                            Numero di telefono: {customer.numero}
                         </p>
                         <p>
-                            codice fiscale
+                            Codice fiscale: {customer.codice_fiscale}
                         </p>
                     </li>
                 </ul>
-            })}
-        </div>
+
+                <div className='btn'>
+                    <button className='btn btn-danger' onClick={handleButton}>
+                        Torna ai nomi
+                    </button>
+                </div>
+
+
+            </div>
+        </>
     )
 }
