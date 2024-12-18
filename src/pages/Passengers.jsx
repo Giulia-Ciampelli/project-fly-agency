@@ -30,7 +30,7 @@ export default function getData() {
                         <ul className="list-unstyled card p-3 mb-3 text-center" key={custumer.id}>
                             {/* cambiare la key da id a citta_del_viaggio */}
                             <li>
-                                <Link to={`/custumers/${custumer.citta_del_viaggio}/${custumer.id}`}>
+                                <Link className='text-decoration-none text-dark' to={`/custumers/${custumer.citta_del_viaggio}/${custumer.id}`}>
                                     <div>{custumer.nome} {custumer.cognome} </div>
                                 </Link>
                             </li>
