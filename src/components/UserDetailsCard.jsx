@@ -19,14 +19,16 @@ export default function UserDetailsCard() {
     }
 
     return (
-        <div>
+        <div className='card p-2 card-details'>
+
+            <div className='btn'>
+                <button className='btn btn-danger' onClick={handleButton}>
+                    Torna ai nomi
+                </button>
+            </div>
 
 
-            <button onClick={handleButton}>
-                Torna ai nomi
-            </button>
-
-            <ul key={customer.id}>
+            <ul class="list-unstyled" key={customer.id}>
                 <li >
                     <p>
                         Mail: {customer.email}
