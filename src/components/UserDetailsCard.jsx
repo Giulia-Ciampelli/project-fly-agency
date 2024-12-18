@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // Link su nome, mostrare a schermo mail, numero di telefono e codice fiscale
 import TravelCustomers from '../data/TravelCostumers.js';
@@ -10,10 +11,20 @@ import TravelCustomers from '../data/TravelCostumers.js';
 export default function UserDetailsCard() {
     const { id, citta_del_viaggio } = useParams();
     const customer = TravelCustomers.find(customer => customer.id === parseInt(id) && customer.citta_del_viaggio === citta_del_viaggio)
+    const navigate = useNavigate()
+    const handleButton = () => {
+
+        navigate(-1)
+
+    }
 
     return (
         <div>
 
+
+            <button onClick={handleButton}>
+                Torna ai nomi
+            </button>
 
             <ul key={customer.id}>
                 <li >
