@@ -21,7 +21,7 @@ export default function getData() {
 
             <div className="container">
                 <form onChange={handleForm}>
-                    <div className='mb-4 input-search'>
+                    <div className='mb-5 input-search'>
                         <input type="search" className='form-control' name='searchText' id='searchText' aria-describedby='searchHelper' placeholder='search...' value={nome} onChange={e => setNome(e.target.value)} />
                     </div>
                 </form>
@@ -37,7 +37,7 @@ export default function getData() {
                         </ul>
                     ))}
                     <Link to='/'>
-                        <button className='btn btn-danger'>Torna alla Home</button>
+                        <button className='btn btn-danger mt-5'>Torna alla Home</button>
                     </Link>
                 </div>
             </div>
