@@ -28,7 +28,7 @@ export default function UserDetailsCard() {
             </div>
 
 
-            <ul class="list-unstyled" key={customer.id}>
+            <ul className="list-unstyled" key={customer.id}>
                 <li >
                     <p>
                         Mail: {customer.email}
