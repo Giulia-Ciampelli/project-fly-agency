@@ -9,31 +9,28 @@ import TravelCustomers from '../data/TravelCostumers.js';
 
 export default function UserDetailsCard() {
     const { id } = useParams();
-    const userFilter = TravelCustomers.filter(customer => customer.id === customer.id)
+    const customer = TravelCustomers.find(customer => customer.id === customer.id && customer.citta_del_viaggio === customer.citta_del_viaggio)
 
     return (
         <div>
 
-            {/* correggo il map */}
-            {TravelCustomers.map(customer => {
 
-                return (
-                    <ul>
-                        <li key={customer.id}>
-                            <p>
-                                Mail: {customer.email}
-                            </p>
-                            <p>
-                                Numero di telefono: {customer.numero}
-                            </p>
-                            <p>
-                                Codice fiscale: {customer.codice_fiscale}
-                            </p>
-                        </li>
-                    </ul>
+            <ul key={customer.id}>
+                <li >
+                    <p>
+                        Mail: {customer.email}
+                    </p>
+                    <p>
+                        Numero di telefono: {customer.numero}
+                    </p>
+                    <p>
+                        Codice fiscale: {customer.codice_fiscale}
+                    </p>
+                </li>
+            </ul>
 
-                )
-            })}
+
+
         </div>
     )
 }
