@@ -7,7 +7,7 @@ export default function DefaultLayout() {
     return (
         <>
             <Header />
-            <main className="p-4">
+            <main className="p-4" style={{minHeight: '90vh'}}>
                 <Outlet />
             </main>
             <Footer />
