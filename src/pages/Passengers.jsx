@@ -17,13 +17,14 @@ export default function getData() {
 
     return (
         <>
-            <form onChange={handleForm}>
-                <div className='mb-4'>
-                    <input type="search" className='form-control' name='searchText' id='searchText' aria-describedby='searchHelper' value={nome} onChange={e => setNome(e.target.value)} />
-                </div>
-            </form>
+
 
             <div className="container">
+                <form onChange={handleForm}>
+                    <div className='mb-4 input-search'>
+                        <input type="search" className='form-control' name='searchText' id='searchText' aria-describedby='searchHelper' placeholder='search...' value={nome} onChange={e => setNome(e.target.value)} />
+                    </div>
+                </form>
                 <div className="row">
                     {filteredSearch.map(custumer => (
                         <ul className="list-unstyled card p-3 mb-3 text-center" key={custumer.id}>
