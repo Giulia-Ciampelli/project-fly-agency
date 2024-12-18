@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 export default function getData() {
 
     const { citta_del_viaggio } = useParams()
-    // la chiave non è unica, dobbiamo trovare un metodo diverso da useParams
+    //é un filtro che quando schiacci sulla citta ti reinderizza la pagina dei partecipanti
     const filteredCustomers = Custumers.filter(custumer => custumer.citta_del_viaggio === citta_del_viaggio)
 
     return (
