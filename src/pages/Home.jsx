@@ -16,8 +16,8 @@ export default function Home() {
                         TravelCostumers.map(travel => (
                             <div className="card p-3 mb-3 text-center" key={travel.id}>
                                 <h3>{travel.citta_del_viaggio}</h3>
-                                <p>{travel.data_inizio}</p>
-                                <p>{travel.data_fine}</p>
+                                <p>Partenza: {travel.data_inizio}</p>
+                                <p>Arrivo: {travel.data_fine}</p>
                                 <div><Link to={`custumers/${travel.citta_del_viaggio}`}><button className="btn bg-primary text-white" >Details</button></Link></div>
                             </div>
                         ))
