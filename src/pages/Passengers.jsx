@@ -9,7 +9,7 @@ export default function getData() {
     const { citta_del_viaggio } = useParams()
     //é un filtro che quando schiacci sulla citta ti reinderizza la pagina dei partecipanti
     const filteredCustomers = Custumers.filter(custumer => custumer.citta_del_viaggio === citta_del_viaggio)
-    const filteredSearch = filteredCustomers.filter(custumer => custumer.nome.toLowerCase().includes(nome.toLowerCase()))
+    const filteredSearch = filteredCustomers.filter(custumer => custumer.nome.toLowerCase().includes(nome.toLowerCase()) || custumer.cognome.toLowerCase().includes(nome.toLowerCase()))
 
     function handleForm(e) {
         e.preventDefault()
