@@ -1,5 +1,6 @@
 import Custumers from '../data/TravelCostumers.js'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function getData() {
 
@@ -15,6 +16,8 @@ export default function getData() {
                         <ul className="list-unstyled card p-3 mb-3 text-center" key={custumer.id}>
                             {/* cambiare la key da id a citta_del_viaggio */}
                             <li>
+                                <Link to={`custumers/${custumer.citta_del_viaggio}/${custumer.id}`}>
+                                </Link>
                                 <div>{custumer.nome} {custumer.cognome} </div>
 
                             </li>

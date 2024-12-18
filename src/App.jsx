@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import DefaultLayout from "./layout/DefaultLayout"
 import Home from "./pages/Home"
 import Passengers from "./pages/Passengers"
+import UserDetailsCard from "./components/UserDetailsCard"
 function App() {
 
 
