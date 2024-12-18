@@ -8,8 +8,8 @@ import TravelCustomers from '../data/TravelCostumers.js';
 // aspettiamo prop del singolo customer da task 2
 
 export default function UserDetailsCard() {
-    const { id } = useParams();
-    const customer = TravelCustomers.find(customer => customer.id === customer.id && customer.citta_del_viaggio === customer.citta_del_viaggio)
+    const { id, citta_del_viaggio } = useParams();
+    const customer = TravelCustomers.find(customer => customer.id === parseInt(id) && customer.citta_del_viaggio === citta_del_viaggio)
 
     return (
         <div>
