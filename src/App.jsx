@@ -12,6 +12,7 @@ function App() {
           <Route path="/" element={<DefaultLayout />}>
             <Route index element={<Home />}></Route>
             <Route path="custumers/:citta_del_viaggio" element={<Passengers />}></Route>
+            <Route path="custumers/:citta_del_viaggio/:id" element={<UserDetailsCard/>}></Route>
             {/* cambiare il path con custumers/: citta_del_viaggio */}
           </Route>
         </Routes>
