@@ -19,31 +19,34 @@ export default function UserDetailsCard() {
     }
 
     return (
-        <div className='card p-2 card-details'>
+        <>
+            <div className='card card-details'>
+                <h3 className='py-2 text-center card-header'>
+                    Profilo utente
+                </h3>
 
-            <div className='btn'>
-                <button className='btn btn-danger' onClick={handleButton}>
-                    Torna ai nomi
-                </button>
+                <ul className="list-unstyled py-2 text-center" key={customer.id}>
+                    <li >
+                        <p>
+                            Mail: {customer.email}
+                        </p>
+                        <p>
+                            Numero di telefono: {customer.numero}
+                        </p>
+                        <p>
+                            Codice fiscale: {customer.codice_fiscale}
+                        </p>
+                    </li>
+                </ul>
+
+                <div className='btn'>
+                    <button className='btn btn-danger' onClick={handleButton}>
+                        Torna ai nomi
+                    </button>
+                </div>
+
+
             </div>
-
-
-            <ul className="list-unstyled" key={customer.id}>
-                <li >
-                    <p>
-                        Mail: {customer.email}
-                    </p>
-                    <p>
-                        Numero di telefono: {customer.numero}
-                    </p>
-                    <p>
-                        Codice fiscale: {customer.codice_fiscale}
-                    </p>
-                </li>
-            </ul>
-
-
-
-        </div>
+        </>
     )
 }
