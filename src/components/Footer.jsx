@@ -3,7 +3,7 @@ export default function Footer() {
 
         <>
             <footer className="bg-success p-1">
-                <h2>Footer</h2>
+                <h2>Footer test</h2>
             </footer>
         </>
     )
