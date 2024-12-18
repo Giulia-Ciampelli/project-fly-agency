@@ -9,6 +9,7 @@ import TravelCustomers from '../data/TravelCostumers.js';
 
 export default function UserDetailsCard() {
     const { id } = useParams();
+    const userFilter = TravelCustomers.filter(customer => customer.id === customer.id)
 
     return (
         <div>
