@@ -27,6 +27,7 @@ export default function UserDetailsCard() {
 
                 <ul className="list-unstyled py-2 text-center" key={customer.id}>
                     <li >
+                        <img src={customer.image_profilo} alt="Immagine profilo" />
                         <p>
                             Mail: {customer.email}
                         </p>
