@@ -15,6 +15,7 @@ export default function Home() {
                     {
                         TravelCostumers.map(travel => (
                             <div className="card p-3 mb-3 text-center" key={travel.id}>
+                                <img src={travel.image} alt="" />
                                 <h3>{travel.citta_del_viaggio}</h3>
                                 <p>Partenza: {travel.data_inizio}</p>
                                 <p>Ritorno: {travel.data_fine}</p>

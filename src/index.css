@@ -18,6 +18,11 @@ main {
     width: 400px;
     margin: auto;
 
+    img {
+        height: 200px;
+    }
+
+
 }
 
 .input-search {
