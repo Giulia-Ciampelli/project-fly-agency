@@ -17,8 +17,8 @@ export default function Home() {
                             <div className="card p-3 mb-3 text-center" key={travel.id}>
                                 <img src={travel.image} alt="" />
                                 <h3>{travel.citta_del_viaggio}</h3>
-                                <p>Partenza: {travel.data_inizio}</p>
-                                <p>Ritorno: {travel.data_fine}</p>
+                                <p className="text-success fs-5">Partenza: {travel.data_inizio}</p>
+                                <p className="text-danger fs-5">Ritorno: {travel.data_fine}</p>
                                 <div><Link to={`custumers/${travel.citta_del_viaggio}`}><button className="btn bg-primary text-white" >Details</button></Link></div>
                             </div>
                         ))
