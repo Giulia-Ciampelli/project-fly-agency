@@ -4,7 +4,12 @@
     box-sizing: border-box;
 }
 
+header {
+    img {
+        width: 90px;
 
+    }
+}
 
 main {
     min-height: 90vh;
@@ -17,6 +22,11 @@ main {
     border: 1px solid black;
     width: 400px;
     margin: auto;
+
+    img {
+        height: 200px;
+    }
+
 
 }
 
